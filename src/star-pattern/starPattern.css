@@ -1,0 +1,14 @@
+.star-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-container .star {
+  font-size: 65px;
+  cursor: pointer;
+}
+
+.star.colored {
+  color: rgb(210, 174, 44);
+}

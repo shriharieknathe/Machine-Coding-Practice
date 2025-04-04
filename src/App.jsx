@@ -1,11 +1,10 @@
 import "./App.css";
-import GridLights from "./components/grid-lights/gridLights";
-import TestGrid from "./components/grid-lights/testGrid";
+import StarPattern from "./star-pattern/starPatern";
 
 function App() {
   return (
     <>
-      <TestGrid />
+      <StarPattern />
     </>
   );
 }
