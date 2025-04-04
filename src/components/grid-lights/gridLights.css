@@ -1,0 +1,63 @@
+.grid_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid_section .grid {
+  display: grid;
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  border: 1px solid black;
+}
+
+.cell {
+  background-color: transparent;
+  border: 1px solid black;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.cell-activate {
+  background-color: green;
+}
+
+.grid_container {
+  width: 45vh;
+  height: 45vh;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  margin: auto;
+}
+
+.grid_row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.grid {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.disable {
+  background-color: rgb(102, 100, 100);
+}
+
+.active {
+  background-color: green;
+}
