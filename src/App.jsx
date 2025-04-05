@@ -1,10 +1,10 @@
 import "./App.css";
-import StarPattern from "./star-pattern/starPatern";
+import ToastMessage from "./toast-message/toastMessage";
 
 function App() {
   return (
     <>
-      <StarPattern />
+      <ToastMessage />
     </>
   );
 }

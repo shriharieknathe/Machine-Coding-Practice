@@ -1,0 +1,43 @@
+
+.toast_container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.toast {
+  width: 250px;
+  background-color: rgb(51, 170, 51);
+  color: black;
+  padding: 12px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  animation: slide 1s 1;
+}
+
+.toast span{
+    cursor: pointer;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.warning {
+  background-color: rgb(167, 150, 24);
+}
+.info {
+  background-color: rgb(125, 125, 199);
+}
+
+.error {
+  background-color: rgb(222, 104, 104);
+}
