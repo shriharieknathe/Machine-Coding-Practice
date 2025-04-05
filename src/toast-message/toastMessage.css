@@ -1,6 +1,6 @@
 .toast_container {
   position: fixed;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
   width: fit-content;
 }
@@ -31,7 +31,6 @@
   }
 }
 
-/* Add this one for left */
 @keyframes slide-left {
   0% {
     transform: translateX(-100%);
@@ -40,6 +39,25 @@
     transform: translateX(0%);
   }
 }
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-up-left {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .warning {
   background-color: rgb(167, 150, 24);
 }

@@ -1,93 +1,99 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./toastMessage.css";
-import { useState } from "react";
 
 const ToastMessage = () => {
   const [toastList, setToastList] = useState([]);
-  const [shiftButton, setShiftButton] = useState("left");
+  const [position, setPosition] = useState("top-right");
 
   const timeRef = useRef({});
-  console.log(timeRef);
 
   const onCloseClick = (id) => {
     clearInterval(timeRef.current[id]);
     delete timeRef.current[id];
-    setToastList((prev) => {
-      const newArr = prev.filter((item) => item.id != id);
-      return newArr;
-    });
+    setToastList((prev) => prev.filter((item) => item.id !== id));
   };
 
   const onButtonClick = (message, type) => {
     const id = new Date().getTime();
     const newList = [...toastList, { id, message, type }];
     setToastList(newList);
-
     timeRef.current[id] = setTimeout(() => onCloseClick(id), 5000);
   };
 
   return (
     <div className="toast_component">
       <div
-        className={`toast_container`}
+        className="toast_container"
         style={{
-          [shiftButton]: "10px",
+          [position.includes("left") ? "left" : "right"]: "10px",
+          [position.includes("top") ? "top" : "bottom"]: "10px",
         }}
       >
-        {toastList.map((item) => {
-          return (
-            <div
-              key={item.id}
-              className={`toast ${item.type}`}
-              style={{
-                animation:
-                  shiftButton === "right" ? "slide-right 1s" : "slide-left 1s",
-              }}
-            >
-              {item.message}
-              <span onClick={() => onCloseClick(item.id)}>X</span>
-            </div>
-          );
-        })}
+        {toastList.map((item) => (
+          <div
+            key={item.id}
+            className={`toast ${item.type}`}
+            style={{
+              animation:
+                position === "top-right"
+                  ? "slide-right 1s"
+                  : position === "top-left"
+                  ? "slide-left 1s"
+                  : position === "bottom-right"
+                  ? "slide-up 1s"
+                  : "slide-up-left 1s",
+            }}
+          >
+            {item.message}
+            <span onClick={() => onCloseClick(item.id)}>X</span>
+          </div>
+        ))}
       </div>
+
       <div className="box">
         <div className="button_container">
-          <button
-            className="btn"
-            onClick={() => onButtonClick("Success", "success")}
-          >
+          <button className="btn" onClick={() => onButtonClick("Success", "success")}>
             Success
           </button>
-          <button
-            className="btn"
-            onClick={() => onButtonClick("Warning", "warning")}
-          >
+          <button className="btn" onClick={() => onButtonClick("Warning", "warning")}>
             Warning
           </button>
-          <button
-            className="btn"
-            onClick={() => onButtonClick("Error", "error")}
-          >
+          <button className="btn" onClick={() => onButtonClick("Error", "error")}>
             Error
           </button>
           <button className="btn" onClick={() => onButtonClick("Info", "info")}>
             Info
           </button>
         </div>
+
         <div className="shift">
           <button
-            disabled={shiftButton === "left"}
+            disabled={position === "top-left"}
             className="btn"
-            onClick={() => setShiftButton("left")}
+            onClick={() => setPosition("top-left")}
           >
-            left
+            Top Left
           </button>
           <button
-            disabled={shiftButton === "right"}
+            disabled={position === "top-right"}
             className="btn"
-            onClick={() => setShiftButton("right")}
+            onClick={() => setPosition("top-right")}
           >
-            right
+            Top Right
+          </button>
+          <button
+            disabled={position === "bottom-left"}
+            className="btn"
+            onClick={() => setPosition("bottom-left")}
+          >
+            Bottom Left
+          </button>
+          <button
+            disabled={position === "bottom-right"}
+            className="btn"
+            onClick={() => setPosition("bottom-right")}
+          >
+            Bottom Right
           </button>
         </div>
       </div>
