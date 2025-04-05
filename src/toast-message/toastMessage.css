@@ -1,8 +1,8 @@
-
 .toast_container {
   position: fixed;
   top: 10px;
   right: 10px;
+  width: fit-content;
 }
 
 .toast {
@@ -18,11 +18,11 @@
   animation: slide 1s 1;
 }
 
-.toast span{
-    cursor: pointer;
+.toast span {
+  cursor: pointer;
 }
 
-@keyframes slide {
+@keyframes slide-right {
   0% {
     transform: translateX(100%);
   }
@@ -31,6 +31,15 @@
   }
 }
 
+/* Add this one for left */
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 .warning {
   background-color: rgb(167, 150, 24);
 }
@@ -40,4 +49,20 @@
 
 .error {
   background-color: rgb(222, 104, 104);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button_container button {
+  margin-right: 8px;
+}
+
+.shift button {
+  margin-right: 8px;
 }
