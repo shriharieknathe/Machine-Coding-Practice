@@ -1,10 +1,10 @@
 import "./App.css";
-import ToastMessage from "./toast-message/toastMessage";
+import MultiSelectInput from "./multi-select-input/multiSelectInput";
 
 function App() {
   return (
     <>
-      <ToastMessage />
+      <MultiSelectInput />
     </>
   );
 }
