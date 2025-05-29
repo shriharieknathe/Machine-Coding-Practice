@@ -1,10 +1,10 @@
 import "./App.css";
-import MultiSelectInput from "./multi-select-input/multiSelectInput";
+import FileExprorer from "./file-explorer/fileExprorer";
 
 function App() {
   return (
     <>
-      <MultiSelectInput />
+      <FileExprorer />
     </>
   );
 }

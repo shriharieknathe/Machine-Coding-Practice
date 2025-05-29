@@ -1,0 +1,7 @@
+.list {
+  text-align: left;
+  padding: 4px 20px;
+}
+.name {
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./otp.css";
 
 const Otp = () => {
@@ -29,7 +29,7 @@ const Otp = () => {
     <div className="opt_container">
       <h1> OTP Verification</h1>
       <div className="input_wrapper">
-        {inputValue.map((value, index) => {
+        {inputValue.map((index) => {
           return (
             <input
               key={index}

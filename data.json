@@ -1,0 +1,70 @@
+[
+  {
+    "id": "1",
+    "name": "components",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "2",
+        "name": "Button",
+        "isFolder": true,
+        "children": [
+          {
+            "id": "3",
+            "name": "Button.tsx",
+            "isFolder": false
+          },
+          {
+            "id": "4",
+            "name": "Button.test.tsx",
+            "isFolder": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Input",
+        "isFolder": true,
+        "children": [
+          {
+            "id": "6",
+            "name": "Input.tsx",
+            "isFolder": false
+          },
+          {
+            "id": "7",
+            "name": "Input.test.tsx",
+            "isFolder": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "utils",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "9",
+        "name": "formatDate.ts",
+        "isFolder": false
+      },
+      {
+        "id": "10",
+        "name": "calculateSum.ts",
+        "isFolder": false
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "README.md",
+    "isFolder": false
+  },
+  {
+    "id": "12",
+    "name": "package.json",
+    "isFolder": false
+  }
+]
